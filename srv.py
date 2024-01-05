@@ -10,7 +10,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print('do_GET',self.path)
         query = urlparse(self.path).query
-        print("query",query)
+        print("query ",query)
 
         self.send_response(200)
         self.send_header('Content-type','text/html; charset=UTF-8')
